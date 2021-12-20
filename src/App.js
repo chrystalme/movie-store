@@ -4,6 +4,7 @@ import Header from './component/Header';
 import Home from './component/Home';
 import Movie from './component/MovieDetails';
 import PageNotFound from './component/PageNotFound';
+import Footer from "./component/Footer"
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
     <Route exact path="/movie/:imdbId" element={<Movie />} />
     <Route element={<PageNotFound />} />
     </Routes>
+    <Footer />
   </BrowserRouter>
     </div>
   );
