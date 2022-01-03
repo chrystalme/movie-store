@@ -14,8 +14,8 @@ function App() {
     <Header />
     <Routes>
     <Route exact path="/" element={<Home />} />
-    <Route exact path="/movie/:imdbId" element={<MovieDetails />} />
-    <Route element={<PageNotFound />} />
+    <Route path="/movie/:imdbId" element={<MovieDetails />} />
+    <Route path="*" element={<PageNotFound />} />
     </Routes>
     <Footer />
   </BrowserRouter>
