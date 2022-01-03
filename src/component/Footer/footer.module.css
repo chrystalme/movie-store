@@ -1,5 +1,5 @@
 @import "../../index.css";
 
 .container{
-  @apply text-center text-indigo-400;
+  @apply flex justify-between items-center w-full absolute bottom-0;
 }
