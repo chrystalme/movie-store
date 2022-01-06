@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className={style.container}>
       <div>Movie App</div>
-      <div className='text-sm text-indigo-400'>&copy;2022, all right reserved. ImDB&reg; movies</div>
+      <div className={style.inner_text}>&copy;2022, all right reserved. ImDB&reg; movies</div>
     </div>
   )
 }

@@ -1,5 +1,9 @@
 @import "../../index.css";
 
 .container{
-  @apply flex flex-col justify-between items-center w-full absolute bottom-0;
+  @apply bg-green-200 py-6 flex flex-col justify-between items-center w-full absolute bottom-0;
+}
+
+.inner_text {
+  @apply text-sm text-indigo-400;
 }
