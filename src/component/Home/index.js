@@ -1,10 +1,11 @@
 import React from 'react'
-import '../../index.css';
+import MovieListing from '../MovieListing'
 
 const Home = () => {
   return (
     <div>
-      <h3 className='text-center text-indigo-400'>Home</h3>
+      <div className='banner-img'></div>
+      <MovieListing />
     </div>
   )
 }
