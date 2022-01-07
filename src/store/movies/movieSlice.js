@@ -14,6 +14,6 @@ const movieSlice = createSlice({
   }
 });
 
-export const { addMovies } = movieSlice.actions;
-export const getAllMovies = state => state.movies.movies // action to dispatch
+export const { addMovies } = movieSlice.actions; // action to dispatch
+export const getAllMovies = state => state.movies.movies // to use with useSelector
 export default movieSlice.reducer

@@ -1,0 +1,5 @@
+@import "../../index.css";
+
+.title {
+  @apply font-bold text-xl text-center py-3;
+}

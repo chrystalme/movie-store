@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { getAllMovies } from '../../store/movies/movieSlice';
 import MovieCard from '../MovieCard';
+import style from './movielist.module.css';
 
 const MovieListing = () => {
   const movies = useSelector(getAllMovies);
@@ -13,7 +14,10 @@ const MovieListing = () => {
   : (<div><h3>{movies.Error}</h3></div>)
   return (
     <div>
-      <h3>{renderedMovies}</h3>
+      <div>
+        <h2 className={style.title}>Movies</h2>       
+         <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1'>{renderedMovies}</div>      
+      </div>
     </div>
   )
 }
