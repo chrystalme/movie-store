@@ -6,23 +6,23 @@ import axiosInstance from '../../helper';
 import { addMovies } from '../../store/movies/movieSlice';
 
 const Home = () => {
-  const movieText = "Harry";
+  const movieText = 'Harry';
   const dispatch = useDispatch();
   useEffect(() => {
     const fetchMovies = async () => {
       const resp = await axiosInstance
-      .get(`?apikey=${apiKey}&s=${movieText}&type=movie`)
-      .catch((err) => {console.log(err.message)})
-      dispatch(addMovies(resp.data))
-    }
-    fetchMovies()
-  }, [dispatch])
+        .get(`?apikey=${apiKey}&s=${movieText}&type=movie`)
+        .catch((err) => { console.error(err.message); });
+      dispatch(addMovies(resp.data));
+    };
+    fetchMovies();
+  }, [dispatch]);
   return (
     <div>
-      <div className='banner-img'></div>
+      <div className="banner-img" />
       <MovieListing />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

@@ -11,5 +11,5 @@
   @apply w-full h-full;
 }
 .card_body {
-  @apply flex flex-row justify-around
+  @apply flex flex-row justify-around;
 }
