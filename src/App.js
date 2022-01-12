@@ -13,7 +13,9 @@ function App() {
         <Header />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/movie/:imdbId" element={<MovieDetails />} />
+          <Route path="movie">
+            <Route path=":imdbId" element={<MovieDetails />} />
+          </Route>
           <Route path="*" element={<PageNotFound />} />
         </Routes>
         <Footer />

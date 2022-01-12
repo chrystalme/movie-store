@@ -7,13 +7,15 @@ import { fetchAsyncMovieOrShowDetails, getDetails } from '../../store/movies/mov
 
 const MovieDetails = () => {
   const { imdbID } = useParams();
+  console.log(imdbID);
   const dispatch = useDispatch();
   const data = useSelector(getDetails);
-  let renderedDetails = '';
+  console.log(data); // why does it return undefined
+  // let renderedDetails = '';
 
-  renderedDetails = data.Response === 'True'
-    ? (data.Search.map((movie) => (<div key={movie.imdbID} data={data} />)))
-    : (<div><h3>{data.Error}</h3></div>);
+  // renderedDetails = data.Response === 'True'
+  //   ? (data.Search.map((movie) => (<div key={movie.imdbID} data={data} />)))
+  //   : (<div><h3>{data.Error}</h3></div>);
 
   useEffect(() => {
     dispatch(fetchAsyncMovieOrShowDetails(imdbID));
@@ -21,7 +23,7 @@ const MovieDetails = () => {
   return (
     <div>
       <h3>Movie Details</h3>
-      <h3>{renderedDetails}</h3>
+      {/* <h3>{renderedDetails}</h3> */}
     </div>
   );
 };

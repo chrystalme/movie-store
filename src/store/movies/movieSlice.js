@@ -27,7 +27,7 @@ export const fetchAsyncShows = createAsyncThunk('movies/fetchAsyncShows', async 
 export const fetchAsyncMovieOrShowDetails = createAsyncThunk('movies/fetchAsyncMovieOrShowDetails',
   async (id) => {
     const response = await axiosInstance
-      .get(`?apikey=${apiKey}&i=${id}&plot=full`)
+      .get(`?apikey=${apiKey}&i=${id}&Plot=full`)
       .catch((err) => console.error(err.message));
     return response.data;
   });
